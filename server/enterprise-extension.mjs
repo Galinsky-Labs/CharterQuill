@@ -11,6 +11,7 @@
 import { readFileSync } from "node:fs";
 import { randomUUID, randomBytes, createHash, timingSafeEqual, createCipheriv, createDecipheriv } from "node:crypto";
 import { boundedJson, HttpError } from "@distributed-governance/engine/account-http";
+import { defineExtension } from "@distributed-governance/engine/extension-sdk";
 import {
   verifyWebhook, signWebhook, bodyDigest, parseScimUser, applyScimPatch, scimResource, seatReconciliation,
   normalizeCapTable, capTableMismatches, esignEvidence, validateEndpoint, retryDelaySeconds, MAX_DELIVERY_ATTEMPTS, OUTBOUND_SCOPES,
@@ -332,12 +333,12 @@ export function createEnterpriseExtension({ env = process.env, clock, fetcher } 
   const config = enterpriseConfig(env);
   let service;
   const get = (services) => (service ??= createEnterpriseService({ ...services, config, ...(clock ? { clock } : {}), ...(fetcher ? { fetcher } : {}) }));
-  return Object.freeze({
+  return defineExtension({
     id: "charter-enterprise",
     migrations: [migration("001-enterprise.sql")],
     config,
     createRoutes: (services) => [{ routes: createEnterpriseRoutes(get(services)),
       bodyLimit: (path) => (/\/api\/charter\/integrations\//.test(path) ? WEBHOOK_LIMIT : path.startsWith("/api/charter/scim/") ? SCIM_LIMIT : 8192) }],
     createWorkers: (services) => (config.outboundKey ? [{ name: "charter-webhooks", intervalMs: 30000, tick: () => get(services).tick() }] : []),
-  });
+  }, { engine: "^1.1.0", profile: "charter", capabilities: ["identity", "billing"], surfaces: ["routes", "workers", "migrations"] });
 }

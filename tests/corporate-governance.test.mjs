@@ -67,6 +67,8 @@ test("multi-class resolution: the common majority cannot carry a charter amendme
   const {roster,snap}=await rosterFromCharter("2026-02-01");
   assert.equal(snap.rosterEntries.length,4);
   const proposalId=await proposal();
+  // Proposals are timestamped by the database clock; never open a vote before them.
+  now=Math.max(now,Date.now()+1000);
   const opened=await s.decisions.open(secretary,tenantId,doc.id,proposalId,{hours:1,commandId:randomUUID(),
     electorate:{source:"roster",rosterId:roster.id,recordDate:iso(now-1)},weighting:"units",
     policySettings:{quorum:{kind:"fraction-weight",numerator:"1",denominator:"2"},classRequirements:[preferredMajority]}});
@@ -87,6 +89,8 @@ test("proxy race and cycle: concurrent direct and proxy ballots resolve to the d
   const proxy=await s.electorates.grantProxy(pref1,tenantId,{granteeId:pref2.accountId,rosterId:roster.id,allocation:null,commandId:randomUUID()});
   await assert.rejects(s.electorates.grantProxy(pref2,tenantId,{granteeId:pref1.accountId,rosterId:roster.id,allocation:null,commandId:randomUUID()}),{code:"PROXY_CYCLE"});
   const proposalId=await proposal();
+  // Proposals are timestamped by the database clock; never open a vote before them.
+  now=Math.max(now,Date.now()+1000);
   await s.decisions.open(secretary,tenantId,doc.id,proposalId,{hours:1,commandId:randomUUID(),
     electorate:{source:"roster",rosterId:roster.id,recordDate:iso(now-1)},weighting:"units",
     policySettings:{quorum:{kind:"fraction-weight",numerator:"1",denominator:"2"},classRequirements:[preferredMajority]}});
