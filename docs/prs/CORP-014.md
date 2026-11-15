@@ -8,7 +8,7 @@ Deploy isolated corporate configuration/frontend, execute real record-date proxy
 
 ## Dependencies and contract boundaries
 
-Local: CORP-013. External: neophilism/Distributed-Governance-Engine#DCE-039.
+Local: CORP-013. External: Galinsky-Labs/Distributed-Governance-Engine#DCE-039.
 Consume versioned engine contracts; preserve tenant IDs, policy/edition/proposal digests and idempotency across every affected boundary. Read docs/ARCHITECTURE.md and docs/SECURITY.md before implementation.
 
 ## Implementation and acceptance

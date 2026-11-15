@@ -8,7 +8,7 @@ Tailor execution capacity, corporate seals if configured, signature order, evide
 
 ## Dependencies and contract boundaries
 
-Local: CORP-008, CORP-009. External: neophilism/Distributed-Governance-Engine#DCE-027.
+Local: CORP-008, CORP-009. External: Galinsky-Labs/Distributed-Governance-Engine#DCE-027.
 Consume versioned engine contracts; preserve tenant IDs, policy/edition/proposal digests and idempotency across every affected boundary. Read docs/ARCHITECTURE.md and docs/SECURITY.md before implementation.
 
 ## Implementation and acceptance

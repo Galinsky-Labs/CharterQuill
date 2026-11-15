@@ -8,7 +8,7 @@ Model interests, recusals, exclusion rules, designated confidential counsel acce
 
 ## Dependencies and contract boundaries
 
-Local: CORP-008. External: neophilism/Distributed-Governance-Engine#DCE-018.
+Local: CORP-008. External: Galinsky-Labs/Distributed-Governance-Engine#DCE-018.
 Consume versioned engine contracts; preserve tenant IDs, policy/edition/proposal digests and idempotency across every affected boundary. Read docs/ARCHITECTURE.md and docs/SECURITY.md before implementation.
 
 ## Implementation and acceptance

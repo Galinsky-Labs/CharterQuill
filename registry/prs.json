@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "repository": "neophilism/CharterQuill",
+  "repository": "Galinsky-Labs/CharterQuill",
   "roadmapVersion": 2,
   "planVerified": true,
   "plannedPrCount": 14,
@@ -16,7 +16,7 @@
       "dependsOn": [],
       "externalDependencies": [
         {
-          "repository": "neophilism/Distributed-Governance-Engine",
+          "repository": "Galinsky-Labs/Distributed-Governance-Engine",
           "unitId": "DCE-001"
         }
       ],
@@ -42,11 +42,11 @@
       ],
       "externalDependencies": [
         {
-          "repository": "neophilism/Distributed-Governance-Engine",
+          "repository": "Galinsky-Labs/Distributed-Governance-Engine",
           "unitId": "DCE-003"
         },
         {
-          "repository": "neophilism/Distributed-Governance-Engine",
+          "repository": "Galinsky-Labs/Distributed-Governance-Engine",
           "unitId": "DCE-038"
         }
       ],
@@ -75,7 +75,7 @@
       ],
       "externalDependencies": [
         {
-          "repository": "neophilism/Distributed-Governance-Engine",
+          "repository": "Galinsky-Labs/Distributed-Governance-Engine",
           "unitId": "DCE-010"
         }
       ],
@@ -104,7 +104,7 @@
       ],
       "externalDependencies": [
         {
-          "repository": "neophilism/Distributed-Governance-Engine",
+          "repository": "Galinsky-Labs/Distributed-Governance-Engine",
           "unitId": "DCE-011"
         }
       ],
@@ -133,11 +133,11 @@
       ],
       "externalDependencies": [
         {
-          "repository": "neophilism/Distributed-Governance-Engine",
+          "repository": "Galinsky-Labs/Distributed-Governance-Engine",
           "unitId": "DCE-011"
         },
         {
-          "repository": "neophilism/Distributed-Governance-Engine",
+          "repository": "Galinsky-Labs/Distributed-Governance-Engine",
           "unitId": "DCE-012"
         }
       ],
@@ -166,7 +166,7 @@
       ],
       "externalDependencies": [
         {
-          "repository": "neophilism/Distributed-Governance-Engine",
+          "repository": "Galinsky-Labs/Distributed-Governance-Engine",
           "unitId": "DCE-018"
         }
       ],
@@ -197,7 +197,7 @@
       ],
       "externalDependencies": [
         {
-          "repository": "neophilism/Distributed-Governance-Engine",
+          "repository": "Galinsky-Labs/Distributed-Governance-Engine",
           "unitId": "DCE-013"
         }
       ],
@@ -226,7 +226,7 @@
       ],
       "externalDependencies": [
         {
-          "repository": "neophilism/Distributed-Governance-Engine",
+          "repository": "Galinsky-Labs/Distributed-Governance-Engine",
           "unitId": "DCE-014"
         }
       ],
@@ -255,7 +255,7 @@
       ],
       "externalDependencies": [
         {
-          "repository": "neophilism/Distributed-Governance-Engine",
+          "repository": "Galinsky-Labs/Distributed-Governance-Engine",
           "unitId": "DCE-018"
         }
       ],
@@ -285,7 +285,7 @@
       ],
       "externalDependencies": [
         {
-          "repository": "neophilism/Distributed-Governance-Engine",
+          "repository": "Galinsky-Labs/Distributed-Governance-Engine",
           "unitId": "DCE-027"
         }
       ],
@@ -314,11 +314,11 @@
       ],
       "externalDependencies": [
         {
-          "repository": "neophilism/Distributed-Governance-Engine",
+          "repository": "Galinsky-Labs/Distributed-Governance-Engine",
           "unitId": "DCE-023"
         },
         {
-          "repository": "neophilism/Distributed-Governance-Engine",
+          "repository": "Galinsky-Labs/Distributed-Governance-Engine",
           "unitId": "DCE-035"
         }
       ],
@@ -347,11 +347,11 @@
       ],
       "externalDependencies": [
         {
-          "repository": "neophilism/Distributed-Governance-Engine",
+          "repository": "Galinsky-Labs/Distributed-Governance-Engine",
           "unitId": "DCE-030"
         },
         {
-          "repository": "neophilism/Distributed-Governance-Engine",
+          "repository": "Galinsky-Labs/Distributed-Governance-Engine",
           "unitId": "DCE-038"
         }
       ],
@@ -380,11 +380,11 @@
       ],
       "externalDependencies": [
         {
-          "repository": "neophilism/Distributed-Governance-Engine",
+          "repository": "Galinsky-Labs/Distributed-Governance-Engine",
           "unitId": "DCE-028"
         },
         {
-          "repository": "neophilism/Distributed-Governance-Engine",
+          "repository": "Galinsky-Labs/Distributed-Governance-Engine",
           "unitId": "DCE-031"
         }
       ],
@@ -413,7 +413,7 @@
       ],
       "externalDependencies": [
         {
-          "repository": "neophilism/Distributed-Governance-Engine",
+          "repository": "Galinsky-Labs/Distributed-Governance-Engine",
           "unitId": "DCE-039"
         }
       ],
@@ -439,7 +439,7 @@
       "number": 1,
       "title": "CORP-001: Establish CharterQuill and shared engine contracts",
       "state": "open",
-      "url": "https://github.com/neophilism/CharterQuill/pull/1",
+      "url": "https://github.com/Galinsky-Labs/CharterQuill/pull/1",
       "createdAt": "2026-10-17T02:50:56Z",
       "updatedAt": "2026-10-17T02:50:56Z",
       "mergedAt": null,

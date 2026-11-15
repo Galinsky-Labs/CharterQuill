@@ -8,7 +8,7 @@ Build board/committee/shareholder rooms and integrate engine identity, encrypted
 
 ## Dependencies and contract boundaries
 
-Local: CORP-001. External: neophilism/Distributed-Governance-Engine#DCE-003, neophilism/Distributed-Governance-Engine#DCE-038.
+Local: CORP-001. External: Galinsky-Labs/Distributed-Governance-Engine#DCE-003, Galinsky-Labs/Distributed-Governance-Engine#DCE-038.
 Consume versioned engine contracts; preserve tenant IDs, policy/edition/proposal digests and idempotency across every affected boundary. Read docs/ARCHITECTURE.md and docs/SECURITY.md before implementation.
 
 ## Implementation and acceptance
