@@ -1,6 +1,6 @@
 # CORP-012: Enterprise identity, billing and integrations
 
-Status: planned PR specification; no GitHub PR number assigned. The foundational commit contributes partial source to unit 001 and is not accepted completion.
+Status: partial. Enterprise integrations behind configuration: SCIM 2.0 with owner-applied deprovisioning, signed/idempotent cap-table and e-sign webhooks (evidence and mismatch reports only), outbound signed webhooks with retry, SSO claim policy and seat reconciliation over shared engine entitlements (see ../OPERATIONS.md). No direct provider API clients, Stripe seat checkout or in-login SSO domain enforcement; no live provider has been connected.
 
 ## Problem and resulting behavior
 

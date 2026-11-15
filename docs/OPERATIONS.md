@@ -11,3 +11,22 @@ Registration: public GitHub source repository Galinsky-Labs/CharterQuill, immuta
 PR protocol: use a foundation bootstrap commit, then create dependency-ordered PRs with stable IDs, actual GitHub mappings and required CI. All planned PR specs are reviewable documents; opening every dependency-blocked empty PR is not useful. Use scripts/verify-pr-merge.mjs for exact-head verification and merging only when authenticated and green. Missing/rate-limited/unstarted/skipped checks never count as passed.
 
 Deployment requires readiness/health, isolated resource identity, migration and rollback records, live multiuser browser journeys, real anchor receipts and source-bound security evidence. Archive backups/recovery tests and cost/scale assumptions. Human review is a post-deployment handoff, never a fictional completed audit.
+
+## Enterprise integrations (CORP-012)
+
+All integrations are off unless their configuration is present on the Render service. Nothing in this repository holds their values.
+
+| Variable | Provider | Unlocks |
+|---|---|---|
+| `CHARTER_SCIM_TOKEN` (≥32 chars) and `CHARTER_SCIM_TENANT_ID` (workspace UUID) | Customer IdP (Okta, Entra ID, Google) | SCIM 2.0 `/api/charter/scim/v2/Users`. Deactivations queue removals that an owner applies. |
+| `CHARTER_CAPTABLE_WEBHOOK_SECRET` (≥32 chars) | Cap-table provider (Carta, Pulley) via a relay that signs `Quill-Signature` | `POST /api/charter/integrations/{workspace}/webhooks/captable`. The cap table is compared with the register; a mismatch report is recorded and the register is never changed. |
+| `CHARTER_ESIGN_WEBHOOK_SECRET` (≥32 chars) | E-sign provider (DocuSign, Dropbox Sign) via a signing relay | `POST /api/charter/integrations/{workspace}/webhooks/esign`. Envelope states are stored as non-authoritative evidence. |
+| `CHARTER_WEBHOOK_ENCRYPTION_KEY` (64 hex) | none | Outbound signed webhooks: `minute-book.entry`, `integration.captable-mismatch` and `scim.deprovision-queued`, with backoff retries. |
+| `OIDC_ISSUER` (plus the engine's OIDC client variables) and `CHARTER_SSO_ALLOWED_DOMAINS` | Customer IdP | Enterprise SSO. The domain policy is reported in `/integrations` but is not yet enforced at engine login. |
+
+- **Seat licensing** uses the engine's shared `seats` entitlement grants. `GET /api/workspaces/{id}/charter/seats` reports whether the workspace is within its licence, unlicensed or over its licence. It never removes members.
+- **Signature format:** `Quill-Signature: t=<unix seconds>,v1=<hex HMAC-SHA256 of "<t>.<raw body>">` with a 300-second tolerance. Event IDs are idempotent, and reusing an ID with a different body returns 409.
+- **Not implemented:**
+  - Direct provider API clients that pull from Carta or DocuSign.
+  - Stripe seat checkout. The engine's Stripe provider handles document credits; seat grants are created by administrators.
+  - SSO domain enforcement inside the engine's login.

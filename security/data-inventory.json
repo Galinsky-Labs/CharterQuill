@@ -73,6 +73,22 @@
       ],
       "services": "no private text, ink, secrets or application keys",
       "onChain": false
+    },
+    {
+      "id": "enterprise-integrations",
+      "assets": [
+        "SCIM user name and external ID",
+        "provider event IDs and body digests",
+        "cap-table mismatch reports (account and class IDs, quantities)",
+        "e-sign envelope IDs and states",
+        "outbound webhook URLs and encrypted signing secrets"
+      ],
+      "plaintextAt": [
+        "CharterQuill service (tenant-scoped rows)",
+        "customer-configured provider and webhook endpoints"
+      ],
+      "services": "disabled unless configured; signed and idempotent; outbound payloads carry digests and counts only, never minute or document text",
+      "onChain": false
     }
   ]
 }
