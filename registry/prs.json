@@ -215,7 +215,8 @@
       "operationalAcceptance": "unverified",
       "contributingPrs": [
         3,
-        5
+        5,
+        7
       ]
     },
     {
@@ -433,7 +434,8 @@
       "operationalAcceptance": "unverified",
       "contributingPrs": [
         3,
-        6
+        6,
+        7
       ]
     }
   ],
