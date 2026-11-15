@@ -8,7 +8,7 @@ Expose governed parameters and change simulation for secretary, director, shareh
 
 ## Dependencies and contract boundaries
 
-Local: CORP-012. External: neophilism/Distributed-Governance-Engine#DCE-028, neophilism/Distributed-Governance-Engine#DCE-031.
+Local: CORP-012. External: Galinsky-Labs/Distributed-Governance-Engine#DCE-028, Galinsky-Labs/Distributed-Governance-Engine#DCE-031.
 Consume versioned engine contracts; preserve tenant IDs, policy/edition/proposal digests and idempotency across every affected boundary. Read docs/ARCHITECTURE.md and docs/SECURITY.md before implementation.
 
 ## Implementation and acceptance

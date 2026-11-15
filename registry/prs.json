@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "repository": "neophilism/CharterQuill",
+  "repository": "Galinsky-Labs/CharterQuill",
   "roadmapVersion": 2,
   "planVerified": true,
   "plannedPrCount": 14,
@@ -16,7 +16,7 @@
       "dependsOn": [],
       "externalDependencies": [
         {
-          "repository": "neophilism/Distributed-Governance-Engine",
+          "repository": "Galinsky-Labs/Distributed-Governance-Engine",
           "unitId": "DCE-001"
         }
       ],
@@ -42,11 +42,11 @@
       ],
       "externalDependencies": [
         {
-          "repository": "neophilism/Distributed-Governance-Engine",
+          "repository": "Galinsky-Labs/Distributed-Governance-Engine",
           "unitId": "DCE-003"
         },
         {
-          "repository": "neophilism/Distributed-Governance-Engine",
+          "repository": "Galinsky-Labs/Distributed-Governance-Engine",
           "unitId": "DCE-038"
         }
       ],
@@ -59,8 +59,11 @@
         "Consumer contract, cross-organization, device authorization and private rendering tests."
       ],
       "specification": "docs/prs/CORP-002.md",
-      "implementationStatus": "planned",
-      "operationalAcceptance": "unverified"
+      "implementationStatus": "implemented",
+      "operationalAcceptance": "unverified",
+      "contributingPrs": [
+        3
+      ]
     },
     {
       "id": "CORP-003",
@@ -72,7 +75,7 @@
       ],
       "externalDependencies": [
         {
-          "repository": "neophilism/Distributed-Governance-Engine",
+          "repository": "Galinsky-Labs/Distributed-Governance-Engine",
           "unitId": "DCE-010"
         }
       ],
@@ -85,8 +88,11 @@
         "Profile goldens, unauthorized override, source-version migration and rollback tests."
       ],
       "specification": "docs/prs/CORP-003.md",
-      "implementationStatus": "planned",
-      "operationalAcceptance": "unverified"
+      "implementationStatus": "implemented",
+      "operationalAcceptance": "unverified",
+      "contributingPrs": [
+        3
+      ]
     },
     {
       "id": "CORP-004",
@@ -98,7 +104,7 @@
       ],
       "externalDependencies": [
         {
-          "repository": "neophilism/Distributed-Governance-Engine",
+          "repository": "Galinsky-Labs/Distributed-Governance-Engine",
           "unitId": "DCE-011"
         }
       ],
@@ -111,8 +117,11 @@
         "Large/fractional quantities, duplicate owner imports, rounding denial, transfers, mixed classes and reconciliation fixtures."
       ],
       "specification": "docs/prs/CORP-004.md",
-      "implementationStatus": "planned",
-      "operationalAcceptance": "unverified"
+      "implementationStatus": "implemented",
+      "operationalAcceptance": "unverified",
+      "contributingPrs": [
+        3
+      ]
     },
     {
       "id": "CORP-005",
@@ -124,11 +133,11 @@
       ],
       "externalDependencies": [
         {
-          "repository": "neophilism/Distributed-Governance-Engine",
+          "repository": "Galinsky-Labs/Distributed-Governance-Engine",
           "unitId": "DCE-011"
         },
         {
-          "repository": "neophilism/Distributed-Governance-Engine",
+          "repository": "Galinsky-Labs/Distributed-Governance-Engine",
           "unitId": "DCE-012"
         }
       ],
@@ -141,8 +150,11 @@
         "Proxy/direct race, cycle, revocation at cutoff, split allocation, forged authority and double-count tests."
       ],
       "specification": "docs/prs/CORP-005.md",
-      "implementationStatus": "planned",
-      "operationalAcceptance": "unverified"
+      "implementationStatus": "implemented",
+      "operationalAcceptance": "unverified",
+      "contributingPrs": [
+        3
+      ]
     },
     {
       "id": "CORP-006",
@@ -154,7 +166,7 @@
       ],
       "externalDependencies": [
         {
-          "repository": "neophilism/Distributed-Governance-Engine",
+          "repository": "Galinsky-Labs/Distributed-Governance-Engine",
           "unitId": "DCE-018"
         }
       ],
@@ -167,8 +179,11 @@
         "Section capability matrix, expired unlock, hidden-reference leakage and multi-clause proposal tests."
       ],
       "specification": "docs/prs/CORP-006.md",
-      "implementationStatus": "planned",
-      "operationalAcceptance": "unverified"
+      "implementationStatus": "implemented",
+      "operationalAcceptance": "unverified",
+      "contributingPrs": [
+        3
+      ]
     },
     {
       "id": "CORP-007",
@@ -182,7 +197,7 @@
       ],
       "externalDependencies": [
         {
-          "repository": "neophilism/Distributed-Governance-Engine",
+          "repository": "Galinsky-Labs/Distributed-Governance-Engine",
           "unitId": "DCE-013"
         }
       ],
@@ -195,8 +210,11 @@
         "Boundary matrices, record-date share exactness, class failures, ties, nonvote categories and mixed-electorate tests."
       ],
       "specification": "docs/prs/CORP-007.md",
-      "implementationStatus": "planned",
-      "operationalAcceptance": "unverified"
+      "implementationStatus": "implemented",
+      "operationalAcceptance": "unverified",
+      "contributingPrs": [
+        3
+      ]
     },
     {
       "id": "CORP-008",
@@ -208,7 +226,7 @@
       ],
       "externalDependencies": [
         {
-          "repository": "neophilism/Distributed-Governance-Engine",
+          "repository": "Galinsky-Labs/Distributed-Governance-Engine",
           "unitId": "DCE-014"
         }
       ],
@@ -221,8 +239,11 @@
         "Notice deadline, missing prerequisite, staged approvals, duplicate meeting close and state-transition tests."
       ],
       "specification": "docs/prs/CORP-008.md",
-      "implementationStatus": "planned",
-      "operationalAcceptance": "unverified"
+      "implementationStatus": "implemented",
+      "operationalAcceptance": "unverified",
+      "contributingPrs": [
+        3
+      ]
     },
     {
       "id": "CORP-009",
@@ -234,7 +255,7 @@
       ],
       "externalDependencies": [
         {
-          "repository": "neophilism/Distributed-Governance-Engine",
+          "repository": "Galinsky-Labs/Distributed-Governance-Engine",
           "unitId": "DCE-018"
         }
       ],
@@ -247,8 +268,11 @@
         "Conflict leak, weight denominator, recusal changes, unauthorized counsel access and retention tests."
       ],
       "specification": "docs/prs/CORP-009.md",
-      "implementationStatus": "planned",
-      "operationalAcceptance": "unverified"
+      "implementationStatus": "implemented",
+      "operationalAcceptance": "unverified",
+      "contributingPrs": [
+        3
+      ]
     },
     {
       "id": "CORP-010",
@@ -261,7 +285,7 @@
       ],
       "externalDependencies": [
         {
-          "repository": "neophilism/Distributed-Governance-Engine",
+          "repository": "Galinsky-Labs/Distributed-Governance-Engine",
           "unitId": "DCE-027"
         }
       ],
@@ -274,8 +298,11 @@
         "Wrong-capacity signer, changed PDF, partial execution, cancellation, mass-consent appendix and independent package verification tests."
       ],
       "specification": "docs/prs/CORP-010.md",
-      "implementationStatus": "planned",
-      "operationalAcceptance": "unverified"
+      "implementationStatus": "implemented",
+      "operationalAcceptance": "unverified",
+      "contributingPrs": [
+        3
+      ]
     },
     {
       "id": "CORP-011",
@@ -287,11 +314,11 @@
       ],
       "externalDependencies": [
         {
-          "repository": "neophilism/Distributed-Governance-Engine",
+          "repository": "Galinsky-Labs/Distributed-Governance-Engine",
           "unitId": "DCE-023"
         },
         {
-          "repository": "neophilism/Distributed-Governance-Engine",
+          "repository": "Galinsky-Labs/Distributed-Governance-Engine",
           "unitId": "DCE-035"
         }
       ],
@@ -304,8 +331,11 @@
         "Hold/delete conflict, removed-member access, key-loss/restore, metadata leak and cross-tenant export tests."
       ],
       "specification": "docs/prs/CORP-011.md",
-      "implementationStatus": "planned",
-      "operationalAcceptance": "unverified"
+      "implementationStatus": "implemented",
+      "operationalAcceptance": "unverified",
+      "contributingPrs": [
+        3
+      ]
     },
     {
       "id": "CORP-012",
@@ -317,11 +347,11 @@
       ],
       "externalDependencies": [
         {
-          "repository": "neophilism/Distributed-Governance-Engine",
+          "repository": "Galinsky-Labs/Distributed-Governance-Engine",
           "unitId": "DCE-030"
         },
         {
-          "repository": "neophilism/Distributed-Governance-Engine",
+          "repository": "Galinsky-Labs/Distributed-Governance-Engine",
           "unitId": "DCE-038"
         }
       ],
@@ -334,8 +364,11 @@
         "SSO audience, SCIM deprovision, forged webhook, cap-table mismatch, provider retry and billing reconciliation tests."
       ],
       "specification": "docs/prs/CORP-012.md",
-      "implementationStatus": "planned",
-      "operationalAcceptance": "unverified"
+      "implementationStatus": "partial",
+      "operationalAcceptance": "unverified",
+      "contributingPrs": [
+        3
+      ]
     },
     {
       "id": "CORP-013",
@@ -347,11 +380,11 @@
       ],
       "externalDependencies": [
         {
-          "repository": "neophilism/Distributed-Governance-Engine",
+          "repository": "Galinsky-Labs/Distributed-Governance-Engine",
           "unitId": "DCE-028"
         },
         {
-          "repository": "neophilism/Distributed-Governance-Engine",
+          "repository": "Galinsky-Labs/Distributed-Governance-Engine",
           "unitId": "DCE-031"
         }
       ],
@@ -364,8 +397,11 @@
         "Role matrix, active-ballot rule-change denial, mobile/keyboard tour, weighted report and admin audit tests."
       ],
       "specification": "docs/prs/CORP-013.md",
-      "implementationStatus": "planned",
-      "operationalAcceptance": "unverified"
+      "implementationStatus": "implemented",
+      "operationalAcceptance": "unverified",
+      "contributingPrs": [
+        3
+      ]
     },
     {
       "id": "CORP-014",
@@ -377,7 +413,7 @@
       ],
       "externalDependencies": [
         {
-          "repository": "neophilism/Distributed-Governance-Engine",
+          "repository": "Galinsky-Labs/Distributed-Governance-Engine",
           "unitId": "DCE-039"
         }
       ],
@@ -390,8 +426,11 @@
         "Current-head full gates, E2EE canaries, cross-tenant browser smoke, load/restore and exact artifact verification; human review follows deployment."
       ],
       "specification": "docs/prs/CORP-014.md",
-      "implementationStatus": "planned",
-      "operationalAcceptance": "unverified"
+      "implementationStatus": "partial",
+      "operationalAcceptance": "unverified",
+      "contributingPrs": [
+        3
+      ]
     }
   ],
   "pullRequests": [
@@ -400,7 +439,7 @@
       "number": 1,
       "title": "CORP-001: Establish CharterQuill and shared engine contracts",
       "state": "open",
-      "url": "https://github.com/neophilism/CharterQuill/pull/1",
+      "url": "https://github.com/Galinsky-Labs/CharterQuill/pull/1",
       "createdAt": "2026-10-17T02:50:56Z",
       "updatedAt": "2026-10-17T02:50:56Z",
       "mergedAt": null,

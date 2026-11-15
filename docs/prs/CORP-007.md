@@ -8,7 +8,7 @@ Configure quorum by represented shares or heads, approval by eligible/cast/prese
 
 ## Dependencies and contract boundaries
 
-Local: CORP-004, CORP-005, CORP-006. External: neophilism/Distributed-Governance-Engine#DCE-013.
+Local: CORP-004, CORP-005, CORP-006. External: Galinsky-Labs/Distributed-Governance-Engine#DCE-013.
 Consume versioned engine contracts; preserve tenant IDs, policy/edition/proposal digests and idempotency across every affected boundary. Read docs/ARCHITECTURE.md and docs/SECURITY.md before implementation.
 
 ## Implementation and acceptance
