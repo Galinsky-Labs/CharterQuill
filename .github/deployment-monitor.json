@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "repository": "Galinsky-Labs/CharterQuill",
+  "repository": "neophilism/CharterQuill",
   "kind": "unclassified",
   "monitoring": {
     "mode": "inventory"
