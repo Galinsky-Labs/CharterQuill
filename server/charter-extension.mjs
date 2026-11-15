@@ -6,6 +6,7 @@
 import { readFileSync } from "node:fs";
 import { randomUUID } from "node:crypto";
 import { boundedJson, HttpError } from "@distributed-governance/engine/account-http";
+import { defineExtension } from "@distributed-governance/engine/extension-sdk";
 import { digest } from "@distributed-governance/engine/src/integrity.mjs";
 import { ENTITY_TYPES, validateRule } from "../src/entities.mjs";
 import { validateShareClass, parseRegisterCsv, recordDateSnapshot } from "../src/share-ledger.mjs";
@@ -308,11 +309,11 @@ export function createCharterRoutes(service) {
   };
 }
 
-export const charterExtension = Object.freeze({
+export const charterExtension = defineExtension({
   id: "charter",
   migrations: [migration("001-charter.sql")],
   pagePaths: CHARTER_PAGES,
   createRoutes(services) {
     return [{ routes: createCharterRoutes(createCharterService(services)), bodyLimit: (path) => (path.endsWith("/charter/register-imports") ? 20_000_000 : path.includes("/charter/") ? 262144 : 16384) }];
   },
-});
+}, { engine: "^1.1.0", profile: "charter", capabilities: ["identity"], surfaces: ["routes", "migrations", "pages"] });
