@@ -109,3 +109,18 @@ test("proxy race and cycle: concurrent direct and proxy ballots resolve to the d
   assert.equal(preferred.approval.met,false,"600 no vs 400 yes in the preferred class");
   assert.equal(certificate.outcome.status,"failed");
 });
+
+test("board tie: the chair's recorded casting vote decides, and only the chair may cast it",async()=>{
+  const proposalId=await proposal();
+  now=Math.max(now,Date.now()+1000);
+  await s.decisions.open(secretary,tenantId,doc.id,proposalId,{hours:1,commandId:randomUUID(),
+    policySettings:{quorum:{kind:"count",minimum:"2"},tieRule:"casting-vote",castingPrincipalId:secretary.accountId}});
+  await s.decisions.cast(common1,tenantId,doc.id,proposalId,{choice:"yes",expectedVersion:0,commandId:randomUUID()});
+  await s.decisions.cast(common2,tenantId,doc.id,proposalId,{choice:"no",expectedVersion:0,commandId:randomUUID()});
+  now+=HOUR+1;
+  await assert.rejects(s.decisions.castingVote(common1,tenantId,doc.id,proposalId,{choice:"yes",commandId:randomUUID()}),{code:"NOT_CASTING_PRINCIPAL"});
+  await s.decisions.castingVote(secretary,tenantId,doc.id,proposalId,{choice:"yes",commandId:randomUUID()});
+  const {certificate}=await s.decisions.close(secretary,tenantId,doc.id,proposalId);
+  assert.equal(certificate.outcome.tie.reason,"casting-vote");
+  assert.equal(certificate.outcome.status,"passed");
+});
